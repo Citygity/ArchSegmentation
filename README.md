@@ -6,8 +6,8 @@ This is my architecture for semantic segmentation, you may reference the guide p
 
 #### results
 
-
-
+![](https://raw.githubusercontent.com/Citygity/ArchSegmentation/master/images/00004997.png)
+![](https://raw.githubusercontent.com/Citygity/ArchSegmentation/master/images/44.png)
 
 
 #### environment
@@ -24,7 +24,7 @@ This is my architecture for semantic segmentation, you may reference the guide p
 
 | Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU |
 | ------- | --------- | -------- | ------- | ------------- | -------- |
-| FPN     | resnet-50 | *train*  | *val*   |               | %        |
+| FPN     | resnet-50 | *train*  | *val*   | %             | %        |
 | EAFPN   | resnet-50 | *train*  | *val*   | 95.285%       | 93.046%  |
 |         |           |          |         |               |          |
 
@@ -34,10 +34,10 @@ The training set contains 180 color image tiles of size 5000×5000, covering a s
 
 I crop the training data to 500*500 for training(), and 1000 500\*500 images for validate.All experiments's results are listed as below.
 
-| Methods | Backbone    | TrainSet | EvalSet | Mean Accuracy | Mean IoU(msf) |
-| ------- | ----------- | -------- | ------- | ------------- | ------------- |
-| FPN     | resnet-101  | *train*  | *val*   | 89.60%        | 83.55%        |
-| EAFPN   | resnet-101  | *train*  | *val*   |               |               |
-| EAFPN   | ResNext 101 | *train*  | val     | 91.92%        | 86.91%        |
-|         |             |          |         |               |               |
-
+| Methods                        | Backbone    | TrainSet | EvalSet | Mean Accuracy | Mean IoU(msf) |
+| ------------------------------ | ----------- | -------- | ------- | ------------- | ------------- |
+| FPN                            | ResNet-101  | *train*  | *val*   | 89.60%        | 83.55%        |
+| EAFPN                          | ResNet-101  | *train*  | *val*   | 92.84%        | 87.60%        |
+| EAFPN                          | ResNext 101 | *train*  | *val*   | 91.92%        | 86.91%        |
+| EFPN(edge detection with ASPP) | ResNet101   | *train*  | *val*   | 93.40%        | 88.32%        |
+|                                |             |          |         |               |               |
