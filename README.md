@@ -25,8 +25,9 @@ This is my architecture for semantic segmentation, you may reference the guide p
 | Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU |
 | ------- | --------- | -------- | ------- | ------------- | -------- |
 | FPN     | resnet-50 | *train*  | *val*   | %             | %        |
+| FPN     | resnet-18 | *train*  | *val*   | 89.87%        | 84.51%   |
 | EAFPN   | resnet-50 | *train*  | *val*   | 95.285%       | 93.046%  |
-|         |           |          |         |               |          |
+| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |
 
 **Inria Aerial Image dataset:**
 
@@ -40,4 +41,8 @@ I crop the training data to 500*500 for training(), and 1000 500\*500 images for
 | EAFPN                          | ResNet-101  | *train*  | *val*   | 92.84%        | 87.60%        |
 | EAFPN                          | ResNext 101 | *train*  | *val*   | 91.92%        | 86.91%        |
 | EFPN(edge detection with ASPP) | ResNet101   | *train*  | *val*   | 93.40%        | 88.32%        |
-|                                |             |          |         |               |               |
+| stcked FPN*                    | ResNet-101  | *train*  | *val*   | 96.77%        | 89.80%        |
+
+FPN is the original model of FPN, EAFPN detects boundary to strengthen the segmentation result.
+
+EFPN(edge detection with ASPP) uses ASPP module to capture multi scale feature map.Stacked FPN is a validating experiment to validate if edge detection is helpful to improve the segmentation result.
