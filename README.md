@@ -2,9 +2,11 @@
 
 This is my architecture for semantic segmentation, you may reference the guide part to get start with this project.The proposed model  EAFPN adds more attention on the boundary of objects.My experiments show that this model is able to improve the segmentation result and suitable for man-made objects with straight boundary.You may reference to the inference result of my model to see the difference.
 
-**Note:**This repo is  copy of EAFPN(without model implementation,the original private repo will be released after my paper released)
+**Note:** This repo is  copy of EAFPN(without model implementation,the original private repo will be released after my paper released)
 
 #### results
+
+result_with_edge is the output of my proposed model EAFPN, result_without_edge is the output of original FPN. Both model use ResNet-101 as backbone. EAFPN adds no extra computation in inferencing phase
 
 ![](https://raw.githubusercontent.com/Citygity/ArchSegmentation/master/images/00004997.png)
 ![](https://raw.githubusercontent.com/Citygity/ArchSegmentation/master/images/44.png)
@@ -45,4 +47,4 @@ I crop the training data to 500*500 for training(), and 1000 500\*500 images for
 
 FPN is the original model of FPN, EAFPN detects boundary to strengthen the segmentation result.
 
-EFPN(edge detection with ASPP) uses ASPP module to capture multi scale feature map.Stacked FPN is a validating experiment to validate if edge detection is helpful to improve the segmentation result.
+EFPN(edge detection with ASPP) uses ASPP module to capture multi scale feature map, this model is training. Stacked FPN is a validating experiment to validate if edge detection is helpful to improve the segmentation result.
