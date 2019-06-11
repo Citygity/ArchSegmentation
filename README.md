@@ -26,12 +26,12 @@ result_with_edge is the output of my proposed model EAFPN, result_without_edge i
 
 tested on 2988 1920\*1020 images.Our FPN model was first trained on cityscape, then finetuned on our own data collected on Beijing-Shanghai Expressway contains 24000+ 1920*1080 annotated images.
 
-| Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU |
-| ------- | --------- | -------- | ------- | ------------- | -------- |
-| FPN     | resnet-50 | *train*  | *val*   | -             | -        |
-| FPN     | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   |
-| EAFPN   | resnet-50 | *train*  | *val*   | 95.285%       | 93.046%  |
-| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |
+| Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU | back ground| roadsign |
+| ------- | --------- | -------- | ------- | ------------- | -------- | ---------- | -------- |
+| FPN     | resnet-50 | *train*  | *val*   | 91.37%        | 87.93%   |  99.85%    | 75.75%   |   
+| FPN     | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   |  99.795%   | 68.525%  |
+| EAFPN   | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   |  99.92%    | 86.285%  |
+| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |            |          |
 
 **Inria Aerial Image dataset:**
 
