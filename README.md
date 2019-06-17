@@ -26,12 +26,12 @@ result_with_edge is the output of my proposed model EAFPN, result_without_edge i
 
 tested on 2988 1920\*1020 images.Our FPN model was first trained on cityscape, then finetuned on our own data collected on Beijing-Shanghai Expressway contains 24000+ 1920*1080 annotated images.
 
-| Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU | back ground| roadsign |
-| ------- | --------- | -------- | ------- | ------------- | -------- | ---------- | -------- |
-| FPN     | resnet-50 | *train*  | *val*   | 91.37%        | 87.93%   |  99.85%    | 75.75%   |   
-| FPN     | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   |  99.795%   | 68.525%  |
-| EAFPN   | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   |  99.92%    | 86.285%  |
-| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |            |          |
+| Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU | IOU back ground| IOU roadsign |
+| ------- | --------- | -------- | ------- | ------------- | -------- | -------------- | ------------ |
+| FPN     | resnet-50 | *train*  | *val*   | 91.37%        | 87.93%   |    99.85%      |     75.75%   |   
+| FPN     | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   |    99.795%     |     68.525%  |
+| EAFPN   | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   |    99.92%      |     86.285%  |
+| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |                |              |
 
 **Inria Aerial Image dataset:**
 
@@ -39,7 +39,7 @@ The training set contains 180 color image tiles of size 5000×5000, covering a s
 
 I crop the training data to 500*500 for training, and 1000 500\*500 images for validate.All experiments's results are listed as below.
 
-| Methods                        | Backbone    | TrainSet | EvalSet | Mean Accuracy | Mean IoU(msf) |
+| Methods                        | Backbone    | TrainSet | EvalSet | Mean Accuracy | Mean IoU |
 | ------------------------------ | ----------- | -------- | ------- | ------------- | ------------- |
 | FPN                            | ResNet-101  | *train*  | *val*   | 89.60%        | 83.55%        |
 | EAFPN                          | ResNet-101  | *train*  | *val*   | 92.84%        | 87.60%        |
