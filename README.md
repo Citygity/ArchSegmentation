@@ -25,27 +25,29 @@ result_with_edge is the output of my proposed model EAFPN, result_without_edge i
 **RoadSign (Non open dataset)**
 
 tested on 2988 1920\*1020 images.Our FPN model was first trained on cityscape, then finetuned on our own data collected on Beijing-Shanghai Expressway contains 24000+ 1920*1080 annotated images.
+EASwiftnet may get a better result after more training.
 
-| Methods | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU | IOU back ground| IOU roadsign |
-| ------- | --------- | -------- | ------- | ------------- | -------- | -------------- | ------------ |
-| FPN     | resnet-50 | *train*  | *val*   | 91.37%        | 87.93%   |    99.85%      |     75.75%   |   
-| FPN     | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   |    99.795%     |     68.525%  |
-| EAFPN   | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   |    99.92%      |     86.285%  |
-| EAFPN   | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |                |              |
+| Methods    | Backbone  | TrainSet | EvalSet | Mean Accuracy | Mean IoU | IOU back ground | IOU roadsign |
+| ---------- | --------- | -------- | ------- | ------------- | -------- | --------------- | ------------ |
+| FPN        | resnet-50 | *train*  | *val*   | 91.37%        | 87.93%   | 99.85%          | 75.75%       |
+| FPN        | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   | 99.795%         | 68.525%      |
+| EAFPN      | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   | 99.92%          | 86.285%      |
+| EAFPN      | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |                 |              |
+| EASwiftnet*| resnet18  | train    | val     | 91.20%        | 88.625%  | 99.64%          | 77.38%       |
 
 **Inria Aerial Image dataset:**
 
-The training set contains 180 color image tiles of size 5000×5000, covering a surface of 1500 m × 1500 m each (at a 30 cm resolution).  The test set contains the same amount of tiles as the training set (but the reference data is not disclosed).  
+The training set contains 180 color image tiles of size 5000×5000, covering a surface of 1500 m × 1500 m each (at a 30 cm resolution).  The test set contains the same amount of tiles as the training set (but the reference data is not disclosed).  
 
 I crop the training data to 500*500 for training, and 1000 500\*500 images for validate.All experiments's results are listed as below.
 
 | Methods                        | Backbone    | TrainSet | EvalSet | Mean Accuracy | Mean IoU |
-| ------------------------------ | ----------- | -------- | ------- | ------------- | ------------- |
-| FPN                            | ResNet-101  | *train*  | *val*   | 89.60%        | 83.55%        |
-| EAFPN                          | ResNet-101  | *train*  | *val*   | 92.84%        | 87.60%        |
-| EAFPN                          | ResNext 101 | *train*  | *val*   | 92.31%        | 87.14%        |
-| EFPN(edge detection with ASPP) | ResNet101   | *train*  | *val*   | 93.40%        | 88.32%        |
-| stcked FPN*                    | ResNet-101  | *train*  | *val*   | 96.77%        | 89.80%        |
+| ------------------------------ | ----------- | -------- | ------- | ------------- | -------- |
+| FPN                            | ResNet-101  | *train*  | *val*   | 89.60%        | 83.55%   |
+| EAFPN                          | ResNet-101  | *train*  | *val*   | 92.84%        | 87.60%   |
+| EAFPN                          | ResNext 101 | *train*  | *val*   | 92.31%        | 87.14%   |
+| EFPN(edge detection with ASPP) | ResNet101   | *train*  | *val*   | 93.40%        | 88.32%   |
+| stcked FPN*                    | ResNet-101  | *train*  | *val*   | 96.77%        | 89.80%   |
 
 FPN is the original model of FPN, EAFPN detects boundary to strengthen the segmentation result.
 
