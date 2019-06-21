@@ -33,7 +33,7 @@ EASwiftnet may get a better result after more training.
 | FPN        | resnet-18 | *train*  | *val*   | 89.57%        | 84.16%   | 99.795%         | 68.525%      |
 | EAFPN      | resnet-50 | *train*  | *val*   | 95.35%        | 93.10%   | 99.92%          | 86.285%      |
 | EAFPN      | resnet-18 | *tran*   | *val*   | 95.11%        | 92.30%   |                 |              |
-| EASwiftnet*| resnet18  | train    | val     | 91.20%        | 88.625%  | 99.64%          | 77.38%       |
+| EASwiftnet*| resnet18  | *train*  | *val*   | 92.25%        | \*90.192%| 99.92%          | 80.46%       |
 
 **Inria Aerial Image dataset:**
 
